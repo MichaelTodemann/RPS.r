@@ -1,0 +1,14 @@
+#1.Run the Script 
+#2. Type "Rock","Paper" or "Scissors" inside RPS(). Example: RPS("Rock")
+#3. Enjoy!!!
+
+RPS<- function(you,opponent=sample(c("Rock", "Paper", "Scissors"),1)){
+  print(paste("You've played", you, ", your opponent played",opponent))
+  if(sum(c(paste(you,opponent,sep=""))== c("RockPaper","ScissorsRock","PaperScissors"))==1){
+  print("You lose!")
+  }else if(sum(c(paste(you,opponent,sep=""))== c("RockRock","ScissorsScissors","PaperPaper"))==1){
+  print("It's a tie!")
+  }else{
+  print("You win!")
+  }
+}
